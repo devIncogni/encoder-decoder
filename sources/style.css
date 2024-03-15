@@ -33,7 +33,7 @@ h2 {
 
 #main-body {
     flex: 1;
-    background-color: #101010;
+    background-color: #000000;
     color: white;
 }
 
@@ -47,9 +47,13 @@ h2 {
 input, textarea {
     outline: none;
     border: none;
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px;
     border-radius: 5px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 button {
@@ -57,29 +61,35 @@ button {
     background-color: #ffcdcd;
     font-size: 20px;
     padding: 5px;
-    transition: 0.5s;
+    transition: all 0.5s;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-    transition: 0.5s;
+    transition: all 0.5s;
     border: none;
     background-color: #a9ffa3;
     font-size: 20px;
     padding: 5px;
+    cursor: pointer;
     border-radius: 5px;
 }
 
 button:active {
+    transition: all 0s;
     border: none;
     background-color: #58ff60;
     font-size: 20px;
     padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-
-
+button:active:after{
+    transition: 0s;
+    /* background-color: #a9ffa3; */
+}
 
 /* Generic */
 
@@ -90,17 +100,18 @@ button:active {
     gap: 10px;
     justify-content: center;
     align-items: stretch;
-    padding: 10px;
+    padding: 20px;
 }
 
 .ed {
     flex: 1;
     display: flex;
+    background-color: #000000;
+    box-shadow: 0 0 8px;
+    border-radius: 10px;
 }
 
 .ed > div {
-    border: 1px solid white;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -111,4 +122,5 @@ button:active {
 .result {
     flex: 1;
     border-radius: 10px;
+    cursor: default;
 }
