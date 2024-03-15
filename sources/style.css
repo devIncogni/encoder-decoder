@@ -50,7 +50,8 @@ a {
     text-align: center;
 }
 
-input, textarea {
+input,
+textarea {
     outline: none;
     border: none;
     font-size: 18px;
@@ -62,40 +63,50 @@ input, textarea {
     font-style: normal;
 }
 
+/* button animation */
+
+@property --red {
+    syntax: '<color>';
+    initial-value: #fa5560;
+    inherits: false;
+}
+
+@property --megenta {
+    syntax: '<color>';
+    initial-value: #b14bf4;
+    inherits: false;
+}
+
+@property --blue {
+    syntax: '<color>';
+    initial-value: #4d91ff;
+    inherits: false;
+}
+
 button {
     border: none;
-    background-color: #ffcdcd;
+    background: linear-gradient(135deg, var(--red) -24%, var(--megenta) 46%, var(--blue) 114%);
+    transition: --megenta 0.5s, --blue 0.5s;
+    color: #ffffff;
     font-size: 20px;
     padding: 5px;
-    transition: all 0.5s;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    transition: all 0.5s;
-    border: none;
-    background-color: #a9ffa3;
-    font-size: 20px;
-    padding: 5px;
-    cursor: pointer;
-    border-radius: 5px;
+    --red: #fa5560;
+    --megenta: #4d91ff;
+    --blue: #4d91ff;
 }
 
 button:active {
-    transition: all 0s;
-    border: none;
-    background-color: #58ff60;
-    font-size: 20px;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+    --red: #fa5560;
+    --megenta: #b14bf4;
+    --blue: #4d91ff;
 }
 
-button:active:after{
-    transition: 0s;
-    /* background-color: #a9ffa3; */
-}
+/* button animation */
 
 /* Generic */
 
@@ -117,7 +128,7 @@ button:active:after{
     border-radius: 10px;
 }
 
-.ed > div {
+.ed>div {
     display: flex;
     flex-direction: column;
     gap: 10px;
