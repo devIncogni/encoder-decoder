@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
+/* #region Generic formatting */
 * {
     padding: 0;
     margin: 0;
@@ -67,7 +67,7 @@ textarea {
     font-style: normal;
 }
 
-/*region button animation */
+/* #region Button animation */
 
 @property --red {
     syntax: '<color>';
@@ -111,9 +111,9 @@ button:active {
     transition: --red 0s, --megenta 0s, --blue 0s;
 }
 
-/* button animation */
+/* #endregion button animation */
 
-/* Scrollbar-styling */
+/* #region Scrollbar-styling */
 
 ::-webkit-scrollbar {
     width: 18px;
@@ -134,10 +134,10 @@ button:active {
     background-color: #929292;
 }
 
-/* Scrollbar-styling */
+/* #endregion Scrollbar-styling */
 
 
-/* Generic */
+/* #endregion Generic */
 
 /* Main body Elements */
 #main-body {
