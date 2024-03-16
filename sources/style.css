@@ -56,8 +56,8 @@ a {
 
 input,
 textarea {
-    outline: none;
-    border: none;
+    /* outline: 1px solid #b14bf4; */
+    /* border: none; */
     font-size: 18px;
     padding: 5px;
     border-radius: 5px;
@@ -67,7 +67,7 @@ textarea {
     font-style: normal;
 }
 
-/* button animation */
+/*region button animation */
 
 @property --red {
     syntax: '<color>';
@@ -90,7 +90,7 @@ textarea {
 button {
     border: none;
     background: linear-gradient(135deg, var(--red) -24%, var(--megenta) 46%, var(--blue) 114%);
-    transition: --megenta 0.5s, --blue 0.5s;
+    transition: --red 0.5s, --megenta 0.5s, --blue 0.5s;
     color: #ffffff;
     font-size: 20px;
     padding: 5px;
@@ -108,6 +108,7 @@ button:active {
     --red: #fa5560;
     --megenta: #b14bf4;
     --blue: #4d91ff;
+    transition: --red 0s, --megenta 0s, --blue 0s;
 }
 
 /* button animation */
@@ -158,12 +159,12 @@ button:active {
     transition: all 0.5s;
 }
 
-.ed:focus-within,
+/* .ed:focus-within,
 .ed:hover {
     box-shadow: 0 0 8px;
     color: #b14bf4;
     transition: all 0.5s;
-}
+} */
 
 .ed>div {
     display: flex;
@@ -178,4 +179,5 @@ button:active {
     cursor: default;
     resize: none;
     text-align: justify;
+    outline: none;
 }
