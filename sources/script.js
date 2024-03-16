@@ -125,3 +125,14 @@ buttons.map((button) => {
     perform(requestedOperation);
   });
 });
+
+// Enter Key
+[...document.querySelectorAll(".ed")].map((aDivElement) => {
+  aDivElement.addEventListener("keydown", (event) => {
+    if (event.target.tagName === "INPUT" && event.key === "Enter") {
+      event.target.parentElement.querySelector(".submit").click();
+    } else {
+      return;
+    }
+  });
+});
