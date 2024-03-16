@@ -14,8 +14,8 @@ class message {
   }
 
   generateKey() {
-    if (isNaN(this.key)) {
-      this.key = Math.round(Math.random() * 10);
+    if (this.key.length == 0 || isNaN(this.key) || !isFinite(this.key)) {
+      this.key = Math.round(Math.random() * 100);
     }
     //
     else {
@@ -61,7 +61,7 @@ class message {
   }
 
   setKey(key) {
-    this.key = key
+    this.key = key;
   }
 
   getMsg() {
@@ -76,3 +76,52 @@ class message {
     return this.shiftedMsg;
   }
 }
+
+// #region Functions
+function perform(operation = "Encrypt") {
+  if (operation.toLowerCase().charAt(0) == "e") {
+    let txt = msgInputField[0].value;
+    let key = seedInputField[0].value;
+
+    let msg = new message(txt, key);
+
+    msg.generateKey();
+    seedInputField[0].value = msg.getKey();
+
+    msg.useKeyShifting();
+    outputField[0].value = msg.getShiftedMsg();
+  }
+  //
+  else {
+    let txt = msgInputField[1].value;
+    let key = seedInputField[1].value;
+
+    let msg = new message(txt, key);
+
+    if (key.length == 0 || isNaN(key) || !isFinite(key)) {
+      alert("Please Enter a Vaild Decryption Key");
+      outputField[1].value = "ERR: INVALID KEY";
+      return;
+    }
+
+    msg.initializeDecryption();
+    msg.useKeyShifting();
+    outputField[1].value = msg.getShiftedMsg();
+  }
+}
+
+// #endregion Functions
+
+let msgInputField = [...document.querySelectorAll(".enc-dec")]; // All Message Inputs
+let seedInputField = [...document.querySelectorAll(".seed")]; // All Seed Input Fields
+let outputField = [...document.querySelectorAll(".result")]; // All Text Output Fields
+let buttons = [...document.querySelectorAll(".submit")]; // All Buttons
+
+// Button Clicking
+buttons.map((button) => {
+  button.addEventListener("click", (event) => {
+    let requestedOperation = event.target.textContent;
+    console.log(event.target.textContent);
+    perform(requestedOperation);
+  });
+});
