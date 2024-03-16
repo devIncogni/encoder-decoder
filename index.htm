@@ -5,36 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./sources/style.css" />
     <script src="./sources/script.js" defer></script>
-    <title>Cipher | devIncogni</title>
+    <title>Encryption | devIncogni</title>
   </head>
 
   <body>
     <div id="header">
       <h1>
-        <a href="" target="_blank" rel="noopener noreferrer">Encoder-Decoder</a>
+        <a href="./index.htm" rel="noopener noreferrer">Encryptor-Decryptor</a>
       </h1>
     </div>
     <div id="main-body">
       <div class="ed">
         <div>
-          <h2>Encoder</h2>
-          <input type="text" name="msg" class="enc-dec" placeholder="Message" />
-          <input type="text" name="msg" class="seed" placeholder="Seed" />
-          <button>Encode</button>
-          <textarea name="msg-out" class="result" readonly>
-Encoded Output Here</textarea
-          >
+          <h2>Encryptor</h2>
+          <input
+            type="text"
+            name="msg"
+            class="enc-dec"
+            placeholder="Enter text to be encrypted"
+          />
+          <input
+            type="text"
+            name="msg"
+            class="seed"
+            placeholder="E-Key (Leave empty to generate a 128 bit Key)"
+          />
+          <button>Encrypt</button>
+          <textarea
+            name="msg-out"
+            class="result"
+            placeholder="Encoded Output Here"
+            readonly
+          ></textarea>
         </div>
       </div>
       <div class="ed">
         <div>
-          <h2>Decoder</h2>
-          <input type="text" name="msg" class="enc-dec" placeholder="Message" />
-          <input type="text" name="msg" class="seed" placeholder="Seed" />
-          <button>Decode</button>
-          <textarea name="msg-out" class="result" readonly>
-Decoded Output Here</textarea
-          >
+          <h2>Decryptor</h2>
+          <input
+            type="text"
+            name="msg"
+            class="enc-dec"
+            placeholder="Enter text to be decrypted"
+          />
+          <input
+            type="text"
+            name="msg"
+            class="seed"
+            placeholder="D-Key (Use generated key)"
+          />
+          <button>Decrypt</button>
+          <textarea
+            name="msg-out"
+            class="result"
+            placeholder="Decoded Output Here"
+            readonly
+          ></textarea>
         </div>
       </div>
     </div>

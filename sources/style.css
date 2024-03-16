@@ -108,6 +108,30 @@ button:active {
 
 /* button animation */
 
+/* Scrollbar-styling */
+
+::-webkit-scrollbar {
+    width: 18px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b8b8b8;
+    border-radius: 10px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #929292;
+}
+
+/* Scrollbar-styling */
+
+
 /* Generic */
 
 /* Main body Elements */
@@ -138,6 +162,7 @@ button:active {
 
 .result {
     flex: 1;
-    border-radius: 10px;
     cursor: default;
+    resize: none;
+    text-align: justify;
 }
