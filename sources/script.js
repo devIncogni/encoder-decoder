@@ -1,5 +1,4 @@
 // Building a very simple encryptor function to simply change the letter's ASCII by 1 from 65(A) to 122(z)
-
 class message {
   /**
    * Creates an instance of message.
@@ -110,6 +109,13 @@ function perform(operation = "Encrypt") {
   }
 }
 
+function pressSubmit(event) {
+  if (event.key === "Enter") {
+    event.target.parentElement.querySelector(".submit").click();
+  } else {
+    return;
+  }
+}
 // #endregion Functions
 
 let msgInputField = [...document.querySelectorAll(".enc-dec")]; // All Message Inputs
@@ -127,12 +133,10 @@ buttons.map((button) => {
 });
 
 // Enter Key
-[...document.querySelectorAll(".ed")].map((aDivElement) => {
-  aDivElement.addEventListener("keydown", (event) => {
-    if (event.target.tagName === "INPUT" && event.key === "Enter") {
-      event.target.parentElement.querySelector(".submit").click();
-    } else {
-      return;
-    }
-  });
-});
+msgInputField.map((inputField) => {
+  inputField.addEventListener('keydown', pressSubmit)
+})
+
+seedInputField.map((inputField) => {
+  inputField.addEventListener('keydown', pressSubmit)
+})
