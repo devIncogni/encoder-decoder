@@ -19,11 +19,16 @@ h1 {
     font-size: 32px;
     font-weight: 400;
     cursor: pointer;
+    user-select: none;
+    color: #e6e6e6;
 }
 
 h2 {
     font-size: 24px;
     font-weight: 700;
+    cursor: default;
+    user-select: none;
+    color: white;
 }
 
 a {
@@ -33,7 +38,6 @@ a {
 
 #header {
     background-color: #000000;
-    color: #e6e6e6;
     padding: 10px;
 }
 
@@ -150,6 +154,15 @@ button:active {
     background-color: #000000;
     box-shadow: 0 0 8px;
     border-radius: 10px;
+
+    transition: all 0.5s;
+}
+
+.ed:focus-within,
+.ed:hover {
+    box-shadow: 0 0 8px;
+    color: #b14bf4;
+    transition: all 0.5s;
 }
 
 .ed>div {
