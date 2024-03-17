@@ -21,7 +21,7 @@ h1 {
     cursor: pointer;
     user-select: none;
     color: #e6e6e6;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 h2 {
@@ -40,6 +40,8 @@ a {
 #header {
     background-color: #000000;
     padding: 10px 0;
+    display: flex;
+    justify-content: center;
 }
 
 #main-body {
