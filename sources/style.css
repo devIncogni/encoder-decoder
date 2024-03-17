@@ -21,6 +21,7 @@ h1 {
     cursor: pointer;
     user-select: none;
     color: #e6e6e6;
+    margin-left: 50px;
 }
 
 h2 {
@@ -116,7 +117,7 @@ button:active {
 /* #region Scrollbar-styling */
 
 ::-webkit-scrollbar {
-    width: 18px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -126,7 +127,7 @@ button:active {
 ::-webkit-scrollbar-thumb {
     background-color: #b8b8b8;
     border-radius: 10px;
-    border: 6px solid transparent;
+    border: 2px solid transparent;
     background-clip: content-box;
 }
 
@@ -143,10 +144,10 @@ button:active {
 #main-body {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 50px;
     justify-content: center;
     align-items: stretch;
-    padding: 5px;
+    padding: 10px 60px;
 }
 
 .ed {
